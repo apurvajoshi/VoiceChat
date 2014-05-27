@@ -32,6 +32,7 @@
 		70AB485119332E1F0077CC3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485019332E1F0077CC3A /* Security.framework */; };
 		70AB485319332E2A0077CC3A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485219332E2A0077CC3A /* StoreKit.framework */; };
 		70AB485519332E350077CC3A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485419332E350077CC3A /* SystemConfiguration.framework */; };
+		70AB4858193372100077CC3A /* chatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AB4857193372100077CC3A /* chatCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		70AB485019332E1F0077CC3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		70AB485219332E2A0077CC3A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		70AB485419332E350077CC3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		70AB4856193372100077CC3A /* chatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatCell.h; sourceTree = "<group>"; };
+		70AB4857193372100077CC3A /* chatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				70AB4823193310F80077CC3A /* SecondViewController.m */,
 				70AB4825193310F80077CC3A /* Images.xcassets */,
 				70AB4811193310F80077CC3A /* Supporting Files */,
+				70AB4856193372100077CC3A /* chatCell.h */,
+				70AB4857193372100077CC3A /* chatCell.m */,
 			);
 			path = VoiceChat;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AB4858193372100077CC3A /* chatCell.m in Sources */,
 				70AB4824193310F80077CC3A /* SecondViewController.m in Sources */,
 				70AB481B193310F80077CC3A /* AppDelegate.m in Sources */,
 				70AB4821193310F80077CC3A /* FirstViewController.m in Sources */,

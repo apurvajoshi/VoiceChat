@@ -21,7 +21,46 @@
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
     
+    [self handleLogin];
+    
     return YES;
+}
+
+- (void)signUp {
+    PFUser *user = [PFUser user];
+    user.username = @"Apurv Joshi";
+    user.password = @"apurv";
+    
+    // other fields can be set just like with PFObject
+    user[@"phone"] = @"415-589-0398";
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hooray! Let them use the app now.
+            // Associate the device with a user
+            [self handleLogin];
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            // Show the errorString somewhere and let the user try again.
+        }
+    }];
+}
+
+- (void)handleLogin {
+    [PFUser logInWithUsernameInBackground:@"Apurv Joshi" password:@"apurv"
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            PFInstallation *installation = [PFInstallation currentInstallation];
+                                            installation[@"user"] = [PFUser currentUser];
+                                            installation[@"phone"] = @"415-589-0398";
+                                            [installation saveInBackground];
+
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                            [self signUp];
+                                        }
+                                    }];
 }
 
 - (void)application:(UIApplication *)application
