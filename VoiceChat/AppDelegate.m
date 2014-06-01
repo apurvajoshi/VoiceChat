@@ -17,11 +17,21 @@
     [Parse setApplicationId:@"ctBI3x89h2jDYa4vCfSBW0YNcJQ3TpnFUhBgQHwX"
                   clientKey:@"k7dApninmD8DbkqW7WMSI2bygADvMVBZFX6W7Gov"];
     
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-     UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+//    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+//     UIRemoteNotificationTypeAlert|
+//     UIRemoteNotificationTypeSound];
+//    
+//    [self handleLogin];
     
-    [self handleLogin];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults stringForKey:@"chatName"]) {
+        // first time it's run, create a userDefault
+        [defaults setObject:@"Chat Name" forKey:@"chatName"];
+        [defaults synchronize];
+    }
+
     
     return YES;
 }
@@ -40,7 +50,6 @@
             // Associate the device with a user
             [self handleLogin];
         } else {
-            NSString *errorString = [error userInfo][@"error"];
             // Show the errorString somewhere and let the user try again.
         }
     }];
@@ -67,14 +76,14 @@
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    [currentInstallation saveInBackground];
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    [currentInstallation setDeviceTokenFromData:deviceToken];
+//    [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+    //[PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

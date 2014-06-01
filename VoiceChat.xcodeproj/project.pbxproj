@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704A6BF6193AC44B00FF3E6B /* DMChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */; };
+		704A6BFB193AFD7100FF3E6B /* background_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 704A6BF7193AFD7100FF3E6B /* background_pattern.png */; };
+		704A6BFC193AFD7100FF3E6B /* background_pattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 704A6BF8193AFD7100FF3E6B /* background_pattern@2x.png */; };
+		704A6BFD193AFD7100FF3E6B /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 704A6BF9193AFD7100FF3E6B /* chat.png */; };
+		704A6BFE193AFD7100FF3E6B /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 704A6BFA193AFD7100FF3E6B /* chat@2x.png */; };
+		708413E3193B17BA00B06248 /* textfield_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 708413E1193B17BA00B06248 /* textfield_background.png */; };
+		708413E4193B17BA00B06248 /* textfield_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 708413E2193B17BA00B06248 /* textfield_background@2x.png */; };
 		70AB480B193310F80077CC3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB480A193310F80077CC3A /* Foundation.framework */; };
 		70AB480D193310F80077CC3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB480C193310F80077CC3A /* CoreGraphics.framework */; };
 		70AB480F193310F80077CC3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB480E193310F80077CC3A /* UIKit.framework */; };
@@ -46,6 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		704A6BF4193AC44B00FF3E6B /* DMChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChatRoomViewController.h; sourceTree = "<group>"; };
+		704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChatRoomViewController.m; sourceTree = "<group>"; };
+		704A6BF7193AFD7100FF3E6B /* background_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_pattern.png; path = "../../../../Downloads/chatDemo-master/chatDemo/background_pattern.png"; sourceTree = "<group>"; };
+		704A6BF8193AFD7100FF3E6B /* background_pattern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_pattern@2x.png"; path = "../../../../Downloads/chatDemo-master/chatDemo/background_pattern@2x.png"; sourceTree = "<group>"; };
+		704A6BF9193AFD7100FF3E6B /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chat.png; path = "../../../../Downloads/chatDemo-master/chatDemo/chat.png"; sourceTree = "<group>"; };
+		704A6BFA193AFD7100FF3E6B /* chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chat@2x.png"; path = "../../../../Downloads/chatDemo-master/chatDemo/chat@2x.png"; sourceTree = "<group>"; };
+		708413E1193B17BA00B06248 /* textfield_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = textfield_background.png; path = "../../../../Downloads/chatDemo-master/chatDemo/textfield_background.png"; sourceTree = "<group>"; };
+		708413E2193B17BA00B06248 /* textfield_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "textfield_background@2x.png"; path = "../../../../Downloads/chatDemo-master/chatDemo/textfield_background@2x.png"; sourceTree = "<group>"; };
 		70AB4807193310F80077CC3A /* VoiceChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AB480A193310F80077CC3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70AB480C193310F80077CC3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +130,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		704A6BFF193AFDA800FF3E6B /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				708413E1193B17BA00B06248 /* textfield_background.png */,
+				708413E2193B17BA00B06248 /* textfield_background@2x.png */,
+				704A6BF7193AFD7100FF3E6B /* background_pattern.png */,
+				704A6BF8193AFD7100FF3E6B /* background_pattern@2x.png */,
+				704A6BF9193AFD7100FF3E6B /* chat.png */,
+				704A6BFA193AFD7100FF3E6B /* chat@2x.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		708413E5193B303C00B06248 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		70AB47FE193310F80077CC3A = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +193,8 @@
 		70AB4810193310F80077CC3A /* VoiceChat */ = {
 			isa = PBXGroup;
 			children = (
+				708413E5193B303C00B06248 /* Utils */,
+				704A6BFF193AFDA800FF3E6B /* resources */,
 				70AB4819193310F80077CC3A /* AppDelegate.h */,
 				70AB481A193310F80077CC3A /* AppDelegate.m */,
 				70AB481C193310F80077CC3A /* Main.storyboard */,
@@ -169,6 +206,8 @@
 				70AB4811193310F80077CC3A /* Supporting Files */,
 				70AB4856193372100077CC3A /* chatCell.h */,
 				70AB4857193372100077CC3A /* chatCell.m */,
+				704A6BF4193AC44B00FF3E6B /* DMChatRoomViewController.h */,
+				704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */,
 			);
 			path = VoiceChat;
 			sourceTree = "<group>";
@@ -249,6 +288,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = SayIt;
 				TargetAttributes = {
+					70AB4806193310F80077CC3A = {
+						DevelopmentTeam = 2E94MNFYHJ;
+					};
 					70AB482A193310F80077CC3A = {
 						TestTargetID = 70AB4806193310F80077CC3A;
 					};
@@ -278,9 +320,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A6BFE193AFD7100FF3E6B /* chat@2x.png in Resources */,
 				70AB4826193310F80077CC3A /* Images.xcassets in Resources */,
+				704A6BFC193AFD7100FF3E6B /* background_pattern@2x.png in Resources */,
+				708413E3193B17BA00B06248 /* textfield_background.png in Resources */,
 				70AB4815193310F80077CC3A /* InfoPlist.strings in Resources */,
+				704A6BFB193AFD7100FF3E6B /* background_pattern.png in Resources */,
 				70AB481E193310F80077CC3A /* Main.storyboard in Resources */,
+				708413E4193B17BA00B06248 /* textfield_background@2x.png in Resources */,
+				704A6BFD193AFD7100FF3E6B /* chat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +349,7 @@
 			files = (
 				70AB4858193372100077CC3A /* chatCell.m in Sources */,
 				70AB4824193310F80077CC3A /* SecondViewController.m in Sources */,
+				704A6BF6193AC44B00FF3E6B /* DMChatRoomViewController.m in Sources */,
 				70AB481B193310F80077CC3A /* AppDelegate.m in Sources */,
 				70AB4821193310F80077CC3A /* FirstViewController.m in Sources */,
 				70AB4817193310F80077CC3A /* main.m in Sources */,
@@ -428,7 +477,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -437,7 +487,7 @@
 				GCC_PREFIX_HEADER = "VoiceChat/VoiceChat-Prefix.pch";
 				INFOPLIST_FILE = "VoiceChat/VoiceChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83DF0482-E139-4CE2-8C5F-58855EE0692D";
+				PROVISIONING_PROFILE = "5857DCAA-BB0D-44A6-A27A-6F44731421CC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,7 +497,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -456,7 +507,7 @@
 				GCC_PREFIX_HEADER = "VoiceChat/VoiceChat-Prefix.pch";
 				INFOPLIST_FILE = "VoiceChat/VoiceChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83DF0482-E139-4CE2-8C5F-58855EE0692D";
+				PROVISIONING_PROFILE = "5857DCAA-BB0D-44A6-A27A-6F44731421CC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -520,6 +571,7 @@
 				70AB483E193310F80077CC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70AB483F193310F80077CC3A /* Build configuration list for PBXNativeTarget "VoiceChatTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +580,7 @@
 				70AB4841193310F80077CC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
