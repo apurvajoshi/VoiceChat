@@ -21,7 +21,7 @@
 //     UIRemoteNotificationTypeAlert|
 //     UIRemoteNotificationTypeSound];
 //    
-//    [self handleLogin];
+    [self handleLogin];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -38,11 +38,11 @@
 
 - (void)signUp {
     PFUser *user = [PFUser user];
-    user.username = @"Apurv Joshi";
-    user.password = @"apurv";
+    user.username = @"Sunil Kumar D M";
+    user.password = @"sunil";
     
     // other fields can be set just like with PFObject
-    user[@"phone"] = @"415-589-0398";
+    user[@"phone"] = @"4129965318";
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -56,13 +56,13 @@
 }
 
 - (void)handleLogin {
-    [PFUser logInWithUsernameInBackground:@"Apurv Joshi" password:@"apurv"
+    [PFUser logInWithUsernameInBackground:@"Sunil Kumar D M" password:@"sunil"
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             // Do stuff after successful login.
                                             PFInstallation *installation = [PFInstallation currentInstallation];
                                             installation[@"user"] = [PFUser currentUser];
-                                            installation[@"phone"] = @"415-589-0398";
+                                            installation[@"phone"] = @"4129965318";
                                             [installation saveInBackground];
 
                                         } else {
