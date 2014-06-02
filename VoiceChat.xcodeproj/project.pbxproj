@@ -37,7 +37,6 @@
 		70AB484D19332E0E0077CC3A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB484C19332E0E0077CC3A /* MobileCoreServices.framework */; };
 		70AB484F19332E150077CC3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB484E19332E150077CC3A /* QuartzCore.framework */; };
 		70AB485119332E1F0077CC3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485019332E1F0077CC3A /* Security.framework */; };
-		70AB485319332E2A0077CC3A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485219332E2A0077CC3A /* StoreKit.framework */; };
 		70AB485519332E350077CC3A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB485419332E350077CC3A /* SystemConfiguration.framework */; };
 		70AB4858193372100077CC3A /* chatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AB4857193372100077CC3A /* chatCell.m */; };
 /* End PBXBuildFile section */
@@ -90,7 +89,6 @@
 		70AB484C19332E0E0077CC3A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		70AB484E19332E150077CC3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		70AB485019332E1F0077CC3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		70AB485219332E2A0077CC3A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		70AB485419332E350077CC3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		70AB4856193372100077CC3A /* chatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatCell.h; sourceTree = "<group>"; };
 		70AB4857193372100077CC3A /* chatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatCell.m; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AB485519332E350077CC3A /* SystemConfiguration.framework in Frameworks */,
-				70AB485319332E2A0077CC3A /* StoreKit.framework in Frameworks */,
 				70AB485119332E1F0077CC3A /* Security.framework in Frameworks */,
 				70AB484F19332E150077CC3A /* QuartzCore.framework in Frameworks */,
 				70AB484D19332E0E0077CC3A /* MobileCoreServices.framework in Frameworks */,
@@ -173,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				70AB485419332E350077CC3A /* SystemConfiguration.framework */,
-				70AB485219332E2A0077CC3A /* StoreKit.framework */,
 				70AB485019332E1F0077CC3A /* Security.framework */,
 				70AB484E19332E150077CC3A /* QuartzCore.framework */,
 				70AB484C19332E0E0077CC3A /* MobileCoreServices.framework */,
@@ -290,6 +286,11 @@
 				TargetAttributes = {
 					70AB4806193310F80077CC3A = {
 						DevelopmentTeam = 2E94MNFYHJ;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					70AB482A193310F80077CC3A = {
 						TestTargetID = 70AB4806193310F80077CC3A;
@@ -477,8 +478,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -487,7 +488,7 @@
 				GCC_PREFIX_HEADER = "VoiceChat/VoiceChat-Prefix.pch";
 				INFOPLIST_FILE = "VoiceChat/VoiceChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5857DCAA-BB0D-44A6-A27A-6F44731421CC";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -497,8 +498,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sunil kumar  Devalokam murali (ZWE99H7ZXW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -507,7 +508,7 @@
 				GCC_PREFIX_HEADER = "VoiceChat/VoiceChat-Prefix.pch";
 				INFOPLIST_FILE = "VoiceChat/VoiceChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5857DCAA-BB0D-44A6-A27A-6F44731421CC";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
