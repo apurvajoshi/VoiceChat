@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3778DB194039FB00A8A540 /* AllContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778D6194039FB00A8A540 /* AllContactsViewController.m */; };
+		2D3778DC194039FB00A8A540 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778D8194039FB00A8A540 /* ContactDetailViewController.m */; };
+		2D3778DD194039FB00A8A540 /* FavoritiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778DA194039FB00A8A540 /* FavoritiesViewController.m */; };
 		704A6BF6193AC44B00FF3E6B /* DMChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */; };
 		70AB2F91193C00E7003CEA19 /* background_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AB2F8D193C00E7003CEA19 /* background_pattern.png */; };
 		70AB2F92193C00E7003CEA19 /* background_pattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AB2F8E193C00E7003CEA19 /* background_pattern@2x.png */; };
@@ -52,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D3778D5194039FB00A8A540 /* AllContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllContactsViewController.h; sourceTree = "<group>"; };
+		2D3778D6194039FB00A8A540 /* AllContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllContactsViewController.m; sourceTree = "<group>"; };
+		2D3778D7194039FB00A8A540 /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		2D3778D8194039FB00A8A540 /* ContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		2D3778D9194039FB00A8A540 /* FavoritiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritiesViewController.h; sourceTree = "<group>"; };
+		2D3778DA194039FB00A8A540 /* FavoritiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritiesViewController.m; sourceTree = "<group>"; };
 		704A6BF4193AC44B00FF3E6B /* DMChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMChatRoomViewController.h; sourceTree = "<group>"; };
 		704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMChatRoomViewController.m; sourceTree = "<group>"; };
 		70AB2F8D193C00E7003CEA19 /* background_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_pattern.png; sourceTree = "<group>"; };
@@ -189,6 +198,12 @@
 		70AB4810193310F80077CC3A /* VoiceChat */ = {
 			isa = PBXGroup;
 			children = (
+				2D3778D5194039FB00A8A540 /* AllContactsViewController.h */,
+				2D3778D6194039FB00A8A540 /* AllContactsViewController.m */,
+				2D3778D7194039FB00A8A540 /* ContactDetailViewController.h */,
+				2D3778D8194039FB00A8A540 /* ContactDetailViewController.m */,
+				2D3778D9194039FB00A8A540 /* FavoritiesViewController.h */,
+				2D3778DA194039FB00A8A540 /* FavoritiesViewController.m */,
 				708413E5193B303C00B06248 /* Utils */,
 				704A6BFF193AFDA800FF3E6B /* resources */,
 				70AB4819193310F80077CC3A /* AppDelegate.h */,
@@ -349,10 +364,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AB4858193372100077CC3A /* chatCell.m in Sources */,
+				2D3778DD194039FB00A8A540 /* FavoritiesViewController.m in Sources */,
 				70AB4824193310F80077CC3A /* SecondViewController.m in Sources */,
 				704A6BF6193AC44B00FF3E6B /* DMChatRoomViewController.m in Sources */,
 				70AB481B193310F80077CC3A /* AppDelegate.m in Sources */,
 				70AB4821193310F80077CC3A /* FirstViewController.m in Sources */,
+				2D3778DB194039FB00A8A540 /* AllContactsViewController.m in Sources */,
+				2D3778DC194039FB00A8A540 /* ContactDetailViewController.m in Sources */,
 				70AB4817193310F80077CC3A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
