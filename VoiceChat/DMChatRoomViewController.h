@@ -21,11 +21,12 @@
     PF_EGORefreshTableHeaderView *_refreshHeaderView;
     BOOL _reloading;
     NSString                *className;
-    NSString                *userName;
+    //NSString                *userName;
 }
 @property (nonatomic,strong) IBOutlet UITextField *tfEntry;
 @property (nonatomic, retain) UITableView *chatTable;
 @property (nonatomic, retain) NSArray *chatData;
+@property (nonatomic, strong) NSString *userName;
 
 -(void) registerForKeyboardNotifications;
 -(void) freeKeyboardNotifications;

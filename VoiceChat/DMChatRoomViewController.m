@@ -20,6 +20,7 @@
 @synthesize tfEntry;
 @synthesize chatTable;
 @synthesize chatData;
+@synthesize userName;
 
 BOOL isShowingAlertView = NO;
 BOOL isFirstShown = YES;
@@ -49,6 +50,7 @@ BOOL isFirstShown = YES;
     }
     //  update the last update date
     [_refreshHeaderView refreshLastUpdatedDate];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,10 +66,11 @@ BOOL isFirstShown = YES;
 											  otherButtonTitles:nil];
 		[alert show];
 	}*/
+    NSLog(@"%@", userName);
     className = @"chatroom";
-	userName = @"John Appleseed";
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    userName = [defaults stringForKey:@"chatName"];
+	//userName = @"John Appleseed";
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //userName = [defaults stringForKey:@"chatName"];
     if ([userName isEqualToString:@"Chat Name"]) {
         [self presentChatNameDialog];
     }

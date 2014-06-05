@@ -8,6 +8,7 @@
 
 #import "FavoritiesViewController.h"
 #import <Parse/Parse.h>
+#import "DMChatRoomViewController.h"
 
 @interface FavoritiesViewController ()
 
@@ -85,7 +86,7 @@ ABAddressBookRef favoritiesAddressBook = NULL;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"PersonContact";
+    static NSString *simpleTableIdentifier = @"FavoritiesPersonContact";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
@@ -99,6 +100,16 @@ ABAddressBookRef favoritiesAddressBook = NULL;
 
 -(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier{
     return NO;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showChat"]) {
+        NSIndexPath *indexPath = [self.favoritiesTableView indexPathForSelectedRow];
+        DMChatRoomViewController *destViewController = segue.destinationViewController;
+        //destViewController.userName = [favoritiesContacts objectAtIndex:indexPath.row];
+        destViewController.userName = @"test123";
+        destViewController.hidesBottomBarWhenPushed = YES;
+    }
 }
 
 /*
