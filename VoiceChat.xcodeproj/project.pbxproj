@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D372F371941951B00722275 /* PersonContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D372F361941951B00722275 /* PersonContact.m */; };
+		2D372F3A1941956800722275 /* PersonContactTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D372F391941956800722275 /* PersonContactTableCell.m */; };
 		2D3778DB194039FB00A8A540 /* AllContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778D6194039FB00A8A540 /* AllContactsViewController.m */; };
 		2D3778DC194039FB00A8A540 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778D8194039FB00A8A540 /* ContactDetailViewController.m */; };
 		2D3778DD194039FB00A8A540 /* FavoritiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3778DA194039FB00A8A540 /* FavoritiesViewController.m */; };
@@ -55,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D372F351941951B00722275 /* PersonContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonContact.h; sourceTree = "<group>"; };
+		2D372F361941951B00722275 /* PersonContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonContact.m; sourceTree = "<group>"; };
+		2D372F381941956800722275 /* PersonContactTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonContactTableCell.h; sourceTree = "<group>"; };
+		2D372F391941956800722275 /* PersonContactTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonContactTableCell.m; sourceTree = "<group>"; };
 		2D3778D5194039FB00A8A540 /* AllContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllContactsViewController.h; sourceTree = "<group>"; };
 		2D3778D6194039FB00A8A540 /* AllContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllContactsViewController.m; sourceTree = "<group>"; };
 		2D3778D7194039FB00A8A540 /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
@@ -219,6 +225,10 @@
 				70AB4857193372100077CC3A /* chatCell.m */,
 				704A6BF4193AC44B00FF3E6B /* DMChatRoomViewController.h */,
 				704A6BF5193AC44B00FF3E6B /* DMChatRoomViewController.m */,
+				2D372F351941951B00722275 /* PersonContact.h */,
+				2D372F361941951B00722275 /* PersonContact.m */,
+				2D372F381941956800722275 /* PersonContactTableCell.h */,
+				2D372F391941956800722275 /* PersonContactTableCell.m */,
 			);
 			path = VoiceChat;
 			sourceTree = "<group>";
@@ -371,7 +381,9 @@
 				70AB4821193310F80077CC3A /* FirstViewController.m in Sources */,
 				2D3778DB194039FB00A8A540 /* AllContactsViewController.m in Sources */,
 				2D3778DC194039FB00A8A540 /* ContactDetailViewController.m in Sources */,
+				2D372F3A1941956800722275 /* PersonContactTableCell.m in Sources */,
 				70AB4817193310F80077CC3A /* main.m in Sources */,
+				2D372F371941951B00722275 /* PersonContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

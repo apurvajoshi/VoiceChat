@@ -21,6 +21,7 @@
 @synthesize chatTable;
 @synthesize chatData;
 @synthesize userName;
+@synthesize chatWithPerson;
 
 BOOL isShowingAlertView = NO;
 BOOL isFirstShown = YES;
@@ -66,8 +67,9 @@ BOOL isFirstShown = YES;
 											  otherButtonTitles:nil];
 		[alert show];
 	}*/
-    NSLog(@"%@", userName);
+    NSLog(@"%@", chatWithPerson.phone);
     className = @"chatroom";
+    userName = chatWithPerson.phone;
 	//userName = @"John Appleseed";
     //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //userName = [defaults stringForKey:@"chatName"];
@@ -314,7 +316,7 @@ BOOL isFirstShown = YES;
 - (void)loadLocalChat
 {
     PFQuery *query1 = [PFQuery queryWithClassName:className];
-    
+    [query1 whereKey:@"userName" equalTo:userName];
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
@@ -339,6 +341,7 @@ BOOL isFirstShown = YES;
     __block int totalNumberOfEntries = 0;
     
     PFQuery *query = [PFQuery queryWithClassName:className];
+    [query whereKey:@"userName" equalTo:userName];
 
     
     [query orderByAscending:@"createdAt"];

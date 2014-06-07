@@ -9,6 +9,8 @@
 #import "FavoritiesViewController.h"
 #import <Parse/Parse.h>
 #import "DMChatRoomViewController.h"
+#import "PersonContactTableCell.h"
+#import "PersonContact.h"
 
 @interface FavoritiesViewController ()
 
@@ -28,6 +30,9 @@ ABAddressBookRef favoritiesAddressBook = NULL;
     NSLog(@"Inside Favorities View Controller");
     favoritiesAddressBook = ABAddressBookCreateWithOptions(NULL, faverror);
     favoritiesContacts = [self getAllContacts];
+    for (PersonContact *p in favoritiesContacts) {
+        NSLog(@"%@ - %@", p.name, p.phone);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +45,6 @@ ABAddressBookRef favoritiesAddressBook = NULL;
     
     CFArrayRef allPeople = ABAddressBookCopyArrayOfAllPeople(favoritiesAddressBook);
     CFIndex numberOfPeople = ABAddressBookGetPersonCount(favoritiesAddressBook);
-    NSMutableArray *contactList = [[NSMutableArray alloc] init];
     NSMutableArray *phoneList = [[NSMutableArray alloc] init];
     
     
@@ -61,20 +65,25 @@ ABAddressBookRef favoritiesAddressBook = NULL;
             phoneNumber = [[phoneNumber componentsSeparatedByCharactersInSet:
                             [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
                            componentsJoinedByString:@""];
+            //NSLog(@"phone:%@", phoneNumber);
             [phoneList addObject:phoneNumber];
         }
     }
     
+    NSMutableArray *contactList = [[NSMutableArray alloc] init];
     PFQuery *query = [PFUser query];
     [query whereKey:@"phone" containedIn:phoneList];
     NSArray *users = [query findObjects];
     NSLog(@"Successfully retrieved %d contacts.", users.count);
     for (PFUser *user in users) {
         NSLog(@"%@", user.username);
-        [contactList addObject:user.username];
+        PersonContact *contact = [PersonContact new];
+        contact.name = user.username;
+        contact.phone = user[@"phone"];
+        [contactList addObject:contact];
     }
     
-    [contactList sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    //[contactList sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     return contactList;
 }
@@ -88,13 +97,14 @@ ABAddressBookRef favoritiesAddressBook = NULL;
 {
     static NSString *simpleTableIdentifier = @"FavoritiesPersonContact";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    PersonContactTableCell *cell = (PersonContactTableCell *)[favoritiesTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[PersonContactTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [favoritiesContacts objectAtIndex:indexPath.row];
+    PersonContact *contact = [favoritiesContacts objectAtIndex:indexPath.row];
+    cell.textLabel.text = contact.name;
     return cell;
 }
 
@@ -107,7 +117,7 @@ ABAddressBookRef favoritiesAddressBook = NULL;
         NSIndexPath *indexPath = [self.favoritiesTableView indexPathForSelectedRow];
         DMChatRoomViewController *destViewController = segue.destinationViewController;
         //destViewController.userName = [favoritiesContacts objectAtIndex:indexPath.row];
-        destViewController.userName = @"test123";
+        destViewController.chatWithPerson = [favoritiesContacts objectAtIndex:indexPath.row];
         destViewController.hidesBottomBarWhenPushed = YES;
     }
 }

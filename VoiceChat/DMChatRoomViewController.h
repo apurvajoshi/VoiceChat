@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "chatCell.h"
 //#import "Reachability.h"
+#import "PersonContact.h"
 
 
 @interface DMChatRoomViewController : UIViewController <UITextFieldDelegate,UITableViewDelegate, UITableViewDataSource, PF_EGORefreshTableHeaderDelegate>
@@ -22,11 +23,13 @@
     BOOL _reloading;
     NSString                *className;
     //NSString                *userName;
+    
 }
 @property (nonatomic,strong) IBOutlet UITextField *tfEntry;
 @property (nonatomic, retain) UITableView *chatTable;
 @property (nonatomic, retain) NSArray *chatData;
 @property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) PersonContact *chatWithPerson;
 
 -(void) registerForKeyboardNotifications;
 -(void) freeKeyboardNotifications;
